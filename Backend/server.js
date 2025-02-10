@@ -13,20 +13,10 @@ import { enableRLS } from './lib/autoFix.js';
 const app = express();
 const port = process.env.PORT || 3001;
 
-const allowedOrigins = [
-  'http://localhost:3000', 
-  'https://compliance-checker.atmalviya.cloud/'
-];
-
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
+  origin: '*',  
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json());
