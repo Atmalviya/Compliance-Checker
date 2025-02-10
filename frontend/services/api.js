@@ -62,5 +62,13 @@ export const api = {
       throw new Error('Failed to log evidence');
     }
     return response.json();
-  }
+  },
+
+  async getLogs(limit, offset) {
+    const response = await fetch(`${API_BASE_URL}/api/logs?limit=${limit}&offset=${offset}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch logs');
+    }
+    return response.json();
+  },
 }; 
