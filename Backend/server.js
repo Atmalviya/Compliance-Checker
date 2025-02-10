@@ -14,8 +14,8 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 const allowedOrigins = [
-  'http://localhost:3000', // Development
-  'https://your-production-domain.com' // Production
+  'http://localhost:3000', 
+  'https://compliance-checker.atmalviya.cloud/'
 ];
 
 app.use(cors({
