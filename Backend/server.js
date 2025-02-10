@@ -14,9 +14,14 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: '*',  
+  origin: [
+    'http://localhost:3000',
+    'https://compliance-checker.atmalviya.cloud',
+    'http://compliance-checker.atmalviya.cloud'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 
 app.use(express.json());
