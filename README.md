@@ -27,10 +27,11 @@ A comprehensive tool to monitor and manage security compliance settings for your
 
 ### Backend (.env)
 ```bash
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-NEXT_PUBLIC_SUPABASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN=your_access_token
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_PROJECT_ID=your_project_id
+SUPABASE_ACCESS_TOKEN=your_access_token
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 ```
 
 ### Frontend (.env)
